@@ -46,9 +46,11 @@ export const Thread: FC = () => {
           <div className="min-h-8 flex-grow" />
         </ThreadPrimitive.If>
 
-        <div className="sticky bottom-0 mt-3 flex w-full max-w-[var(--thread-max-width)] flex-col items-center justify-end rounded-t-lg bg-inherit pb-4">
-          <ThreadScrollToBottom />
-          <Composer />
+        <div className="fixed bottom-0 md:left-32 right-0 flex w-full justify-center bg-inherit pb-4 px-4">
+          <div className="w-full max-w-[var(--thread-max-width)]">
+            <ThreadScrollToBottom />
+            <Composer />
+          </div>
         </div>
       </ThreadPrimitive.Viewport>
     </ThreadPrimitive.Root>
@@ -74,7 +76,7 @@ const ThreadWelcome: FC = () => {
     <ThreadPrimitive.Empty>
       <div className="flex w-full max-w-[var(--thread-max-width)] flex-grow flex-col">
         <div className="flex w-full flex-grow flex-col items-center justify-center">
-          <p className="mt-4 font-medium">How can I help you today?</p>
+          <p className="mt-4 font-medium text-xl">Built by <span className="text-3xl text-pink-500 font-bold">Amit kumar</span> </p>
         </div>
         <ThreadWelcomeSuggestions />
       </div>
